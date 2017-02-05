@@ -3,6 +3,7 @@
 	"rules": {
 		"indent": ["error", "tab"],
 		"no-tabs": "off",
+		"comma-dangle": "off",
 		"arrow-body-style": "off",
 		"react/jsx-indent": ["error", 'tab'],
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
