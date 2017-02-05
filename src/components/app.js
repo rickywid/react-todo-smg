@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>React simple starter</div>
-    );
-  }
-}
+const App = () => {
+	return (
+		<form action="" className="form">
+
+			<div className="form-row">
+				<label htmlFor="name">name</label>
+				<input id="name" type="text" />
+			</div>
+			<div className="form-row">
+				<label htmlFor="password">password</label>
+				<input id="password" type="text" />
+			</div>
+		</form>
+	);
+};
+
+export default App;
