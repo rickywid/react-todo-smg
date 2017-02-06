@@ -1,11 +1,9 @@
-@import 'style2.scss';
+@import '_bootstrap.scss';
 
-.form-row {
-	color: red;
-	display: flex;
-	padding: 10px;
+.left {
+        @include make-lg-column(2);
 }
 
-.form-row input {
-	flex: 1;
+.right {
+	@include make-lg-column(8);
 }

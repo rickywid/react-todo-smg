@@ -17,6 +17,7 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "bootstrap-sass": "^3.3.7",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.26.1",
