@@ -22,7 +22,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'css-loader?importLoaders=1!postcss-loader!sass-loader')
+				loader: ExtractTextPlugin.extract('css-loader?importLoaders=1!postcss-loader!sass-loader')
 			}
 		]
 	},
