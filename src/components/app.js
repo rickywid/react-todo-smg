@@ -1,15 +1,13 @@
 import React from 'react';
 
-const App = () => {
-	return (
-		<div>
-			<div className="row">
-				<div className="left">column 1</div>
-				<div className="right">column 2</div>
-			</div>
+export default class App extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 
-		</div>
-	);
-};
-
-export default App;
+	render() {
+		return (
+			<div>It's good</div>
+		);
+	}
+}
