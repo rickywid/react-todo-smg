@@ -1,9 +1,82 @@
 @import '_bootstrap.scss';
 
-.left {
-        @include make-lg-column(2);
+body,
+html {
+	height: 100vh;
 }
 
-.right {
-	@include make-lg-column(8);
+body {
+     background: linear-gradient(45deg, rgba(255,153,135,1) 0%, rgba(237,164,237,1) 100%);	
+     font-family: 'Lobster', cursive;
+}
+
+h1 {	
+	font-size: 56px;
+	text-align: center;
+}
+
+td {
+	width: 100%;
+}
+
+a {
+	float: right;
+	color: #000;
+
+	&:visited,
+	&:active {
+		color: #000;
+	}
+
+	&:hover {
+		color: #333;
+		text-decoration: none;
+	}
+}
+
+.task-name {
+	display: inline-block;
+	width: 70%;
+}
+
+.btn-danger,
+.btn-warning {
+	margin-right: 10px;
+}
+
+.btn-edit {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.completed {
+	opacity: 0.5;
+	text-decoration: line-through;
+
+	transition: opacity .5s
+}
+
+.task-name {
+	font-size: 24px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.form-todo {
+	margin-bottom: 30px;
+	font-size: 36px;
+
+	height: 66px;
+
+	border: none;
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+hr {
+	margin-top: 0;
 }
