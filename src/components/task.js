@@ -9,11 +9,18 @@ export default class Task  extends React.Component {
 		this.handleInput = this.handleInput.bind(this);		
 		this.renderTask = this.renderTask.bind(this);
 		this.renderTaskEdit = this.renderTaskEdit.bind(this);
+		this.removeClass = this.removeClass.bind(this);
 
 		this.state = {
 			isEditing: false,
-			input: this.props.name
+			input: this.props.name,
+			removeClass: false
 		};
+	}
+
+	removeClass() {
+		console.log('called')
+		this.setState({ removeClass: true });
 	}
 
 	handleSave(e) {
@@ -30,14 +37,14 @@ export default class Task  extends React.Component {
 		this.setState({ input: e.target.value });
 	}
 
-	renderTask() {
+	renderTask() {	
 		let taskCompleted = this.props.isComplete ? 'completed' : '';		
-		
+
 		return (
 			<td>
 				<span className={`task-name ${taskCompleted}`} onClick={() => this.props.handleCompleted(this.props.id)}>{this.props.name}</span>
 				<button className="btn btn-warning" onClick={this.handleEdit}>Edit</button>
-				<button className="btn btn-danger" onClick={() => this.props.remove(this.props.id)}>Remove</button>
+				<button className="btn btn-danger" onClick={() => {this.props.remove(this.props.id); this.removeClass()}}>Remove</button>
 			</td>
 		)
 	}
@@ -46,7 +53,7 @@ export default class Task  extends React.Component {
 		return (
 			<td>
 				<form onSubmit={this.handleSave}>
-					<input type="text" className="form-control" value={this.state.input} onChange={this.handleInput} />
+					<input type="text" className="form-control form-edit" value={this.state.input} onChange={this.handleInput} />
 
 					<input type="submit" className="btn btn-success btn-edit" value="Save" />
 					<button className="btn btn-default btn-edit" onClick={this.state.handleEdit}>Cancel</button>
@@ -56,8 +63,10 @@ export default class Task  extends React.Component {
 	}
 
 	render() {
+		const toggleClass = this.state.removeClass ? "fadeOutX" : "flipInX";
+		console.log(this.state.removeClass);
 		return (
-			<tr>
+			<tr className={`animated ${toggleClass}`}>
 				{!this.state.isEditing ?  this.renderTask() : this.renderTaskEdit() }
 			</tr>
 		);
