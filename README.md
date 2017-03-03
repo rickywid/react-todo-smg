@@ -1,10 +1,6 @@
-# ReduxStarterKit 
+# A React To Do 
 
-This is a Redux Starter Kit based off of [Stephen Grider's ReduxSimpleStarter Kit](https://github.com/StephenGrider/ReduxSimpleStarter).
-
-## What's Added In this Kit
-* Sass
-* Sass Lint (Stylelint/Stylelint-order)
-* ESLint (AirBnB configuration)
-
-###### Batteries not included
+git clone https://github.com/rickywid/react-todo-smg.git
+cd <dir>
+npm install
+npm start
