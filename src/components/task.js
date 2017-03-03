@@ -62,10 +62,10 @@ export default class Task  extends React.Component {
 	}
 
 	render() {
-		const toggleClass = this.state.removeClass ? "flipOutX" : "flipInX";
+		//const toggleClass = this.state.removeClass ? "flipOutX" : "flipInX";
 		console.log(this.state.removeClass);
 		return (
-			<tr className={`animated ${toggleClass}`}>
+			<tr className={`animated flipInX`}>
 				{!this.state.isEditing ?  this.renderTask() : this.renderTaskEdit() }
 			</tr>
 		);

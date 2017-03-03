@@ -50,10 +50,8 @@ export default class App extends React.Component {
 	}
 
 	handleRemove(id) {
-		setTimeout(()=> {
-			const arr = this.state.tasks.filter(item => item.id !== id);
-			this.setState({ tasks: arr });
-		},1000);
+		const arr = this.state.tasks.filter(item => item.id !== id);
+		this.setState({ tasks: arr });
 	}
 
 	handleSave(id, input) {
