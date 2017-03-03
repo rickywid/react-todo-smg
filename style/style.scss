@@ -51,10 +51,17 @@ a {
 }
 
 .completed {
-	opacity: 0.5;
+	opacity: 0.3;
 	text-decoration: line-through;
 
-	transition: opacity .5s
+	transition: opacity .3s
+}
+
+.incomplete {
+	opacity: 1;
+	text-decoration: none;
+
+	transition: opacity .3s	
 }
 
 .form-edit {

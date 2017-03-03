@@ -19,7 +19,6 @@ export default class Task  extends React.Component {
 	}
 
 	removeClass() {
-		console.log('called')
 		this.setState({ removeClass: true });
 	}
 
@@ -38,7 +37,7 @@ export default class Task  extends React.Component {
 	}
 
 	renderTask() {	
-		let taskCompleted = this.props.isComplete ? 'completed' : '';		
+		let taskCompleted = this.props.isComplete ? 'completed' : 'incomplete';		
 
 		return (
 			<td>
@@ -63,7 +62,7 @@ export default class Task  extends React.Component {
 	}
 
 	render() {
-		const toggleClass = this.state.removeClass ? "fadeOutX" : "flipInX";
+		const toggleClass = this.state.removeClass ? "flipOutX" : "flipInX";
 		console.log(this.state.removeClass);
 		return (
 			<tr className={`animated ${toggleClass}`}>
