@@ -41,7 +41,7 @@ export default class Task  extends React.Component {
 
 		return (
 			<td>
-				<span className={`task-name ${taskCompleted}`} onClick={() => this.props.handleCompleted(this.props.id)}>{this.props.name}</span>
+				<span className={`task-name ${taskCompleted}`} onClick={() => this.props.handleCompleted(this.props.id)}><i className="fa fa-calendar" aria-hidden="true" />{this.props.name}</span>
 				<button className="btn btn-warning" onClick={this.handleEdit}>Edit</button>
 				<button className="btn btn-danger" onClick={() => {this.props.remove(this.props.id); this.removeClass()}}>Remove</button>
 			</td>
